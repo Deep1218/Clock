@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap");
+body {
+  font-family: "Ubuntu Mono", monospace;
+  /* font-family: "ZCOOL QingKe HuangYou", cursive; */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+li {
+  list-style: none;
+}
+header {
+  /* display: block; */
+  background: black;
+  padding: 10px;
+}
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 24px;
+}
+.nav-bar .brand {
+  margin: 5px;
+  font-size: 35px;
+}
+.nav-bar .brand .brand-name {
+  font-weight: 700;
+  margin-left: 20px;
+}
+.conutries {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+.conutries .conutry-name {
+  display: flex;
+  margin: 10px;
+  /* padding: 10px; */
+}
+.conutries .conutry-name .names {
+  margin: 0px 10px;
+  background: blanchedalmond;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: 400;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.conutries .conutry-name .names:hover {
+  background: rgb(253, 221, 173);
+}
+.center {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.clock-container {
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
