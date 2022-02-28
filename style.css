@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap");
 body {
   font-family: "Ubuntu Mono", monospace;
-  /* font-family: "ZCOOL QingKe HuangYou", cursive; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -57,16 +56,136 @@ header {
 .conutries .conutry-name .names:hover {
   background: rgb(253, 221, 173);
 }
+.conutries .conutry-name .names.active {
+  background: rgb(252, 207, 140);
+}
 .center {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   justify-content: center;
   padding: 10px;
 }
 .clock-container {
+  height: 400px;
+  padding: 20px;
   display: flex;
-  border: 2px solid black;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  position: relative;
+}
+.clock-container .selected-country {
+  display: block;
+  position: absolute;
+  top: 30px;
+}
+.clock-container .analog-clock {
+  border: 2px solid black;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 50%; */
+}
+.clock-container .analog-clock .oneTwo,
+.clock-container .analog-clock .three,
+.clock-container .analog-clock .six,
+.clock-container .analog-clock .nine {
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: black;
+}
+.clock-container .analog-clock .oneTwo,
+.clock-container .analog-clock .six {
+  transform: translateX(-50%) rotate(90deg);
+}
+.clock-container .analog-clock .oneTwo {
+  top: 17px;
+  left: 50%;
+}
+.clock-container .analog-clock .six {
+  bottom: 17px;
+  left: 50%;
+}
+.clock-container .analog-clock .three {
+  right: 0;
+}
+.clock-container .analog-clock .nine {
+  left: 0;
+}
+.clock-container .analog-clock .round {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+  z-index: 2;
+}
+.clock-container .analog-clock .hour,
+.clock-container .analog-clock .minute,
+.clock-container .analog-clock .second {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.clock-container .analog-clock .hour {
+  width: 105px;
+  height: 105px;
+  z-index: 1;
+}
+.clock-container .analog-clock .hour::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(87, 86, 86);
+  width: 5px;
+  height: 48px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.clock-container .analog-clock .minute {
+  width: 125px;
+  height: 125px;
+}
+.clock-container .analog-clock .minute::before {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  width: 5px;
+  height: 64px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.clock-container .analog-clock .second {
+  width: 120px;
+  height: 120px;
+  z-index: 1;
+}
+.clock-container .analog-clock .second::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 2px;
+  height: 80px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.clock-container .digital-clock {
+  border: 2px solid black;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  bottom: 0;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-container .digital-clock .hour,
+.clock-container .digital-clock .minute,
+.clock-container .digital-clock .second {
+  font-family: "ZCOOL QingKe HuangYou", cursive;
 }
